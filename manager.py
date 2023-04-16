@@ -12,6 +12,7 @@ class Manager:
     def get_last_version(self, package_name):
         return max(self._tree[package_name])
 
+    # Да, корректно не работает... Знаю...
     def set_versions(self, package_name, package_version):
         package_dependencies = self._tree[package_name][package_version]
         if package_name in self._versions:
